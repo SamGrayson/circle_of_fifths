@@ -8,7 +8,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 }
 
 .footer a {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
 }
@@ -78,7 +78,6 @@
   flex-wrap: wrap;
 
   max-width: 800px;
-  margin-top: 3rem;
 }
 
 .card {
@@ -113,6 +112,43 @@
 
 .logo {
   height: 1em;
+}
+
+.directions {
+  margin-top: 2rem;
+}
+
+.small_circle {
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 1.5vmin;
+  padding-bottom: 1.5vmin;
+  height: 5vmin;
+  width: 5vmin;
+  margin-right: 1vmin;
+  margin-top: 1vmin;
+}
+.one {
+  background-color: #8db5ea
+}
+.two {
+  background-color: #c99fe3
+}
+.three {
+  background-color: #8ddfe1
+}
+.four {
+  background-color: #6df4cf
+}
+.five {
+  background-color: #e08d8e
+}
+.six {
+  background-color: #ebd38d
+}
+.seven {
+  background-color: #d7e465
 }
 
 @media (max-width: 600px) {

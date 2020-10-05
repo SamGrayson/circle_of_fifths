@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Circle from './Circle'
 
 export default function Home() {
   return (
@@ -11,54 +12,40 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Circle of FIFTHS
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={styles.directions}>
+          <i>Select a note on the circle to see chords in Major and Minor.</i>
+        </div>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className={styles.card}>
+            <h3>MAJOR</h3>
+            <div className={`${styles.one} ${styles.small_circle}`}>I</div>
+            <div className={`${styles.two} ${styles.small_circle}`}>ii</div>
+            <div className={`${styles.three} ${styles.small_circle}`}>iii</div>
+            <div className={`${styles.four} ${styles.small_circle}`}>IV</div>
+            <div className={`${styles.five} ${styles.small_circle}`}>V</div>
+            <div className={`${styles.six} ${styles.small_circle}`}>vi</div>
+            <div className={`${styles.seven} ${styles.small_circle}`}>vii0</div>
+          </div>
+          <div className={styles.card}>
+            <h3>MINOR</h3>
+            <div className={`${styles.six} ${styles.small_circle}`}>vi</div>
+            <div className={`${styles.seven} ${styles.small_circle}`}>vii0</div>
+            <div className={`${styles.five} ${styles.small_circle}`}>V</div>
+            <div className={`${styles.four} ${styles.small_circle}`}>IV</div>
+            <div className={`${styles.three} ${styles.small_circle}`}>iii</div>
+            <div className={`${styles.two} ${styles.small_circle}`}>ii</div>
+            <div className={`${styles.one} ${styles.small_circle}`}>I</div>
+          </div>
+          <Circle></Circle>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <i>circle of fifths reference <a href="https://codepen.io/76sagor/pen/pNZbvg">codepen</a></i>
       </footer>
     </div>
   )
