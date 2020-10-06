@@ -20,7 +20,7 @@
   border-radius: 50%;
   position: relative;
   box-sizing: border-box;
-  box-shadow: 0 1.875vmin 1.875vmin rgba(0, 0, 0, 0.25), inset 0 0 0 9vmin white, inset 0 0 0 16vmin #cccccc;
+  box-shadow: 0 1.875vmin 1.875vmin rgba(0, 0, 0, 0.25);
 }
 .circle_of_fifths::after {
   content: "";

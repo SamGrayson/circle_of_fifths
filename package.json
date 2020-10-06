@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tonaljs/tonal": "^4.2.1",
+    "axios": "^0.20.0",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"

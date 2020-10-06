@@ -1,10 +1,12 @@
 import { Component } from 'react'
 import Styles from '../styles/Circle.module.css'
+import { Scale } from "@tonaljs/tonal";
 
 class Circle extends Component {
     constructor(props){
         super(props)
         this.state = {
+            selectedKey: null,
             active: null,
             prev: null,
             next: null,
@@ -17,14 +19,14 @@ class Circle extends Component {
         // Set Active Key
         await this.setState(
             { 
+                selectedKey: e.currentTarget.attributes['note-key'].value,
                 active: e.currentTarget.attributes['note-key'].value,
                 prev: e.currentTarget.attributes['prev-key'].value,
                 next: e.currentTarget.attributes['next-key'].value,
                 nextNext: e.currentTarget.attributes['next-next-key'].value 
             }
         )
-
-        console.log(this.state)
+        this.props.set_selected_key(this.state.selectedKey)
     }
 
     determine_class_order(key) {
