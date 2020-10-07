@@ -2,7 +2,7 @@ const { Component } = require("react");
 import styles from '../styles/Card.module.less';
 import axios from 'axios';
 
-const romannum = ['-', 'I', 'ii', 'iii', 'IV', 'VI', 'vi', 'vii0'];
+const romannum = ['-', 'I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii0'];
 
 class Card extends Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class Card extends Component {
     }
 
     adjust_note(order) {
-        // ['-', 'I', 'ii', 'iii', 'IV', 'VI', 'vi', 'vii0']
+        // ['-', 'I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii0']
         const num = romannum[order]
         if (num === '-')
             return '-'
