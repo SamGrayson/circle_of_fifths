@@ -1,5 +1,4 @@
-import '../styles/globals.css'
-import '../styles/Circle.module.css'
+import '../styles/globals.less'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.less'
 import Circle from './Circle'
 import Card from './Card'
 import { Component } from 'react';
@@ -67,15 +67,22 @@ class Home extends Component {
           <h1 className={styles.title}>
             Circle of FIFTHS
           </h1>
-
-          <div className={styles.directions}>
-            <i>Select a note on the circle to see chords in a key.</i>
+          <div className={styles.title_line}>
+            <hr></hr>
+          </div>
+          <div className={styles.grid}>
+            <div className={styles.directions}>
+              <i>Select a note on the circle to see the notes in a key. Below the circle you will find Major and Minor information, plus all other modes.</i>
+            </div>
+            <Circle set_selected_key={this.set_selected_key.bind(this)}></Circle>
           </div>
 
+          <div>
+              <h2>COMMON SCALES</h2>
+          </div>
           <div className={styles.grid}>
             <Card scale="MAJOR" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['major']} pentatonic_mode={this.state.pentatonic_mode}></Card>
             <Card scale="MINOR" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['minor']} pentatonic_mode={this.state.pentatonic_mode}></Card>
-            <Circle set_selected_key={this.set_selected_key.bind(this)}></Circle>
           </div>
 
           <div>
@@ -94,12 +101,12 @@ class Home extends Component {
           <div>
             <h2>More Settings</h2>
             <hr></hr>
-            <a className={this.state.pentatonic_mode ? `btn_active` : `btn`} onClick={this.set_pentatonic_mode}>PENTATONIC MODE</a>
+            <a className={this.state.pentatonic_mode ? `${styles.btn_active}` : `${styles.btn}`} onClick={this.set_pentatonic_mode}>PENTATONIC MODE</a>
           </div>
         </main>
 
         <footer className={styles.footer}>
-          <i>circle of fifths reference <a href="https://codepen.io/76sagor/pen/pNZbvg">codepen</a></i>
+          <i>circle of fifths reference <a href="https://codepen.io/32bitkid/pen/mcqlv">codepen</a></i>
         </footer>
       </div>
     )

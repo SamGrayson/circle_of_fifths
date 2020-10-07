@@ -1,5 +1,5 @@
 const { Component } = require("react");
-import styles from '../styles/Card.module.css';
+import styles from '../styles/Card.module.less';
 import axios from 'axios';
 
 const romannum = ['-', 'I', 'ii', 'iii', 'IV', 'VI', 'vi', 'vii0'];
@@ -61,7 +61,7 @@ class Card extends Component {
 
     render() {
         return (
-        <div className={this.props.scale_data.pentatonic_mode && this.props.scale_data.pent_order ? styles.card :`${styles.card} ${styles.invalid}`}>
+        <div className={this.props.pentatonic_mode && this.props.scale_data.pent_order ? styles.card :`${styles.card} ${styles.invalid}`}>
             <h3>{this.props.scale}</h3>
             {this.props.scale_data.mode ? <i><small>{this.props.scale_data.mode}</small></i> : ''}
             <div><small><i>{this.props.scale_data.steps}</i></small></div>
@@ -73,12 +73,21 @@ class Card extends Component {
 }
 
 export async function getStaticProps(context) {
-    const info = await axios.post(`/api/scale`, {scale: scale})
+    console.log(context)
     return {
-        mode: info.data.mode || '-',
-        order: info.data.order,
-        pent_order: info.data.pent_order || null,
-        steps: info.data.steps || '-'
+        props: {
+            scale: null,
+            pentatonic_mode: false,
+            scale_data: {
+                parent_mode: '',
+                mode: '',
+                steps: '',
+                pent_order: [],
+                order: [],
+            },
+            selected_key: null,
+            key_info: []
+        }
     }
 }
 

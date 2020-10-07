@@ -1,6 +1,5 @@
 import { Component } from 'react'
-import Styles from '../styles/Circle.module.css'
-import { Scale } from "@tonaljs/tonal";
+import Styles from '../styles/Circle.module.less'
 
 class Circle extends Component {
     constructor(props){

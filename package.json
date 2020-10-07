@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@tonaljs/tonal": "^4.2.1",
+    "@zeit/next-less": "^1.0.1",
     "axios": "^0.20.0",
+    "less": "^3.12.2",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"

@@ -1,0 +1,27 @@
+@border: 1px solid #efefef;
+@size: 50vw;
+
+@media all and (min-width: 769px) {
+    @size: 50vw;
+    @import (multiple) "circle";
+}
+
+@media all and (max-width: 768px) {
+    @size: 95vw;
+    @import (multiple) "circle";
+    .key {
+        font-size: 5.75vmin;
+        >div {
+            padding-top: 2vmin;
+            padding-bottom: 1vmin;
+            height: 10vmin;
+            width: 10vmin;
+        }
+        >.minor {
+            font-size: 4.75vmin;
+        }
+        >.sig {
+            font-size: 4vmin;
+        }
+    }
+}
