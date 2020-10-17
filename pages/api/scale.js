@@ -47,7 +47,7 @@ const scale_data = {
         parent_mode: 'major',
         mode: 'V',
         pent_order: ['5','6','0','1','2','3','0'],
-        order: ['5','6','7','1','2','3','1'],
+        order: ['5','6','7','1','2','3','4'],
     },
     locrian: {
         parent_mode: 'major',
