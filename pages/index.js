@@ -94,7 +94,7 @@ class Home extends Component {
             <Card scale="PHRYGIAN" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['phrygian']} pentatonic_mode={this.state.pentatonic_mode}></Card>
             <Card scale="LYDIAN" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['lydian']} pentatonic_mode={this.state.pentatonic_mode}></Card>
             <Card scale="MIXOLYDIAN" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['mixolydian']} pentatonic_mode={this.state.pentatonic_mode}></Card>
-            <Card scale="AOELIAN" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['aoelian']} pentatonic_mode={this.state.pentatonic_mode}></Card>
+            <Card scale="AEOLIAN" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['aeolian']} pentatonic_mode={this.state.pentatonic_mode}></Card>
             <Card scale="LOCRIAN" selected_key={this.state.selected_key} key_info={this.state.key_info} scale_data={this.state.scale_data['locrian']} pentatonic_mode={this.state.pentatonic_mode}></Card>
           </div>
 

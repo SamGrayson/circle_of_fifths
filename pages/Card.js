@@ -29,7 +29,7 @@ class Card extends Component {
             order=this.props.scale_data.pent_order
         }
         let selected_key = this.props.selected_key
-        if (this.props.scale_data.mode === 'aoelian') {
+        if (this.props.scale_data.mode === 'aeolian') {
             selected_key = this.props.key_info[5] // Minor is the 6ths interval
         }
         return (

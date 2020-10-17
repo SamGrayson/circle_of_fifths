@@ -1,7 +1,7 @@
 const scale_data = {
     major: {
         parent_mode: 'major',
-        mode: 'ionean',
+        mode: 'ionian',
         steps: 'W-W-H-W-W-W-H',
         pent_order: ['1','2','3','0','5','6','0'],
         order: ['1','2','3','4','5','6','7'],
@@ -14,12 +14,12 @@ const scale_data = {
     },
     minor: {
         parent_mode: 'minor',
-        mode: 'aoelian',
+        mode: 'aeolian',
         steps: 'W-H-W-W-H-W-W',
         pent_order: ['6','0','1','2','3','0','5'],
         order: ['6','7','1','2','3','4','5'],
     },
-    aoelian: {
+    aeolian: {
         parent_mode: 'major',
         mode: 'vi',
         pent_order: ['6','0','1','2','3','0','5'],
